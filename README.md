@@ -1,3 +1,4 @@
+[![Build Status](https://dev.azure.com/Blueski0/Space%20Game%20-%20web%20-%20Workflow/_apis/build/status%2Fkev-ops.mslearn-tailspin-spacegame-web?branchName=main)](https://dev.azure.com/Blueski0/Space%20Game%20-%20web%20-%20Workflow/_build/latest?definitionId=5&branchName=main)
 
 # Contributing
 
