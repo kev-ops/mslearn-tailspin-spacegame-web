@@ -9,7 +9,19 @@ pool:
 variables:
   buildConfiguration: 'Release'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-  dotnetSdkVersion: '8.x'
+  dotnetSdkVersion: '6.x'
+
+  # ✅ Install .NET 6 for your test project
+- task: UseDotNet@2
+  displayName: 'Install .NET 6 SDK'
+  inputs:
+    version: '6.x'
+
+# ✅ Install .NET 8 for ReportGenerator tool (and as default SDK)
+- task: UseDotNet@2
+  displayName: 'Install .NET 8 SDK (default)'
+  inputs:
+    version: '8.x'
 
 steps:
 - task: UseDotNet@2
