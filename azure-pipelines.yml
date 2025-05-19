@@ -1,11 +1,18 @@
-# azure-pipelines.yml
-
 trigger:
-- '*'  # Trigger on any branch commit
+- '*'
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'ubuntu-20.04'
+  demands:
+  - npm
+
+variables:
+  buildConfiguration: 'Release'
+  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+  dotnetSdkVersion: '6.x'
 
 steps:
-- script: echo "Hello, world!"
-  displayName: 'Test Commit Trigger'
+- task: UseDotNet@2
+  displayName: 'Use .NET SDK $(dotnetSdkVersion)'
+  inputs:
+    version: '$(dotnetSdkVersion)'
